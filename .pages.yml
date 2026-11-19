@@ -1,0 +1,43 @@
+media:
+  input: public/images/blog
+  output: /images/blog
+
+content:
+  - name: posts
+    label: Artikel Blog
+    type: collection
+    path: content/posts
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [ title, date, draft ]
+      primary: title
+      sort: [ date, title ]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Judul Artikel
+        type: string
+        required: true
+      - name: date
+        label: Tanggal Publikasi
+        type: date
+        required: true
+      - name: description
+        label: Meta Description (SEO)
+        type: text
+      - name: coverImage
+        label: Gambar Utama (Thumbnail)
+        type: image
+      - name: tags
+        label: Kategori / Tags
+        type: string
+        list: true
+      - name: draft
+        label: Draft (Sembunyikan)
+        type: boolean
+        default: false
+      - name: body
+        label: Isi Artikel
+        type: rich-text
