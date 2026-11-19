@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog & Artikel Kuliner - Kojo Onigiri</title>
+
+  <!-- Favicon tags (mengarah ke domain utama) -->
+  <link rel="icon" type="image/png" sizes="96x96" href="https://kojoonigiri.biz.id/images/favicon-package/favicon-96x96.png">
+  <link rel="icon" href="https://kojoonigiri.biz.id/images/favicon-package/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="icon" href="https://kojoonigiri.biz.id/images/favicon-package/favicon.ico">
+  <link rel="apple-touch-icon" href="https://kojoonigiri.biz.id/images/favicon-package/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Markdown Parser (Marked.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Font Google: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kojo: {
+              red: '#DC2626',
+              redhover: '#B91C1C',
+              dark: '#111827',
+              gray: '#4B5563',
+              light: '#FAFAFA',
+              accent: '#F59E0B',
+              green: '#16A34A',
+              greenhover: '#15803D'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Japanese Pattern Background */
+    .bg-seigaiha {
+      background-color: #fafafa;
+      background-image: radial-gradient(#e5e7eb 0.75px, transparent 0.75px), radial-gradient(#e5e7eb 0.75px, #fafafa 0.75px);
+      background-size: 24px 24px;
+      background-position: 0 0, 12px 12px;
+    }
+    /* Smooth Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #dc2626; border-radius: 4px; }
+
+    /* Styling Konten Artikel Markdown */
+    .prose h2 { font-size: 1.45rem; font-weight: 800; color: #111827; margin: 2rem 0 0.85rem; line-height: 1.3; }
+    .prose h3 { font-size: 1.2rem; font-weight: 700; color: #1f2937; margin: 1.5rem 0 0.65rem; }
+    .prose p { color: #374151; font-size: 1.02rem; line-height: 1.8; margin-bottom: 1.2rem; }
+    .prose ul, .prose ol { margin: 1rem 0 1.25rem 1.5rem; color: #374151; line-height: 1.75; }
+    .prose ul { list-style-type: disc; }
+    .prose ol { list-style-type: decimal; }
+    .prose li { margin-bottom: 0.45rem; }
+    .prose strong { color: #111827; font-weight: 700; }
+    .prose blockquote { border-left: 4px solid #DC2626; background: #FEF2F2; padding: 1rem 1.25rem; border-radius: 0 0.75rem 0.75rem 0; margin: 1.5rem 0; font-style: italic; color: #4B5563; }
+    .prose img { width: 100%; border-radius: 1rem; margin: 1.5rem 0; box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+    .prose a { color: #DC2626; font-weight: 600; text-decoration: underline; }
+  </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-white antialiased selection:bg-red-500 selection:text-white flex flex-col min-h-screen">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-gradient-to-r from-red-700 via-kojo-red to-amber-600 text-white text-xs md:text-sm font-medium py-2.5 px-4 text-center shadow-inner">
+    <div class="max-w-7xl mx-auto flex justify-center items-center gap-2 flex-wrap">
+      <span class="bg-white/20 text-white px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider">Halal 100%</span>
+      <span>🍙 Nikmati sensasi kuliner nasi praktis & lezat! Hubungi WA: <strong>0851-6593-5577</strong></span>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR (HEADER) -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="https://kojoonigiri.biz.id/" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-2xl bg-kojo-red text-white flex items-center justify-center font-bold text-2xl shadow-md shadow-red-200 group-hover:scale-105 transition-transform overflow-hidden">
+            <img src="https://kojoonigiri.biz.id/images/logo.png" alt="Logo Kojo Onigiri" width="48" height="48" onerror="this.style.display='none'; this.parentElement.innerHTML='🍙';">
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-extrabold tracking-tight text-gray-900 group-hover:text-kojo-red transition-colors">KOJO ONIGIRI</span>
+            <span class="text-[11px] font-semibold text-gray-500 uppercase tracking-widest -mt-1">Cara Baru Menikmati Nasi</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-gray-600">
+          <a href="https://kojoonigiri.biz.id/#beranda" class="hover:text-kojo-red transition-colors">Beranda</a>
+          <a href="https://kojoonigiri.biz.id/#keunggulan" class="hover:text-kojo-red transition-colors">Keunggulan</a>
+          <a href="https://kojoonigiri.biz.id/#produk" class="hover:text-kojo-red transition-colors">Varian Produk</a>
+          <a href="https://kojoonigiri.biz.id/#testimoni" class="hover:text-kojo-red transition-colors">Kata Mereka</a>
+          <a href="#/" class="text-kojo-red font-extrabold transition-colors">Blog</a>
+        </nav>
+
+        <!-- Header Actions: WA Button -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="https://kojoonigiri.biz.id/#produk" class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2.5 rounded-xl font-bold text-xs transition-all flex items-center gap-2">
+            <i class="fa-solid fa-utensils text-kojo-red"></i>
+            <span>Lihat Menu</span>
+          </a>
+          <a href="https://wa.me/6285165935577?text=Halo%20Kojo%20Onigiri,%20saya%20ingin%20bertanya%20menu%20dan%20pemesanan" target="_blank" class="inline-flex items-center gap-2 bg-kojo-green hover:bg-kojo-greenhover text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-md shadow-green-100 transition-all hover:-translate-y-0.5">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Pesan via WA</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="flex items-center gap-2 md:hidden">
+          <button id="mobile-menu-btn" class="p-2.5 rounded-xl text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="https://kojoonigiri.biz.id/#beranda" class="block px-3 py-2 rounded-lg font-medium text-gray-700 hover:bg-gray-50 hover:text-kojo-red">Beranda</a>
+      <a href="https://kojoonigiri.biz.id/#keunggulan" class="block px-3 py-2 rounded-lg font-medium text-gray-700 hover:bg-gray-50 hover:text-kojo-red">Keunggulan</a>
+      <a href="https://kojoonigiri.biz.id/#produk" class="block px-3 py-2 rounded-lg font-medium text-gray-700 hover:bg-gray-50 hover:text-kojo-red">Varian Produk</a>
+      <a href="https://kojoonigiri.biz.id/#testimoni" class="block px-3 py-2 rounded-lg font-medium text-gray-700 hover:bg-gray-50 hover:text-kojo-red">Kata Mereka</a>
+      <a href="#/" class="block px-3 py-2 rounded-lg font-extrabold text-kojo-red bg-red-50">Blog</a>
+      <a href="https://wa.me/6285165935577?text=Halo%20Kojo%20Onigiri,%20saya%20mau%20pesan" target="_blank" class="flex items-center justify-center gap-2 bg-kojo-green text-white font-bold py-3 rounded-xl w-full mt-2 shadow-md">
+        <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp: 0851-6593-5577
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN BLOG CONTENT (GRID ARTIKEL & BACA ARTIKEL) -->
+  <main id="app" class="flex-grow bg-seigaiha">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center text-gray-500">
+      <i class="fa-solid fa-circle-notch fa-spin text-3xl text-kojo-red mb-3"></i>
+      <p class="text-sm font-semibold">Memuat artikel terbaru Kojo Onigiri...</p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#B30006] text-gray-300 py-14 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-10 border-b border-red-900/60">
+        <!-- Brand Info -->
+        <div class="space-y-4 md:col-span-1">
+          <div class="flex items-center gap-3">
+            <img src="https://kojoonigiri.biz.id/images/logo.png" class="w-10 h-10 rounded-xl bg-white p-0.5" alt="Logo Kojo Onigiri">
+            <span class="text-xl font-extrabold text-white tracking-tight">KOJO ONIGIRI</span>
+          </div>
+          <p class="text-xs text-red-100/80 leading-relaxed">
+            Cara baru menikmati nasi praktis, lezat, higienis, dan 100% Halal untuk menemani setiap langkah aktivitasmu.
+          </p>
+          <div class="flex gap-3 text-white pt-1">
+            <a href="https://instagram.com/kojo_onigiri" class="w-8 h-8 rounded-full bg-black/25 flex items-center justify-center hover:bg-white hover:text-kojo-red transition-colors text-sm" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@kojoyummyfood" class="w-8 h-8 rounded-full bg-black/25 flex items-center justify-center hover:bg-white hover:text-kojo-red transition-colors text-sm" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/6285165935577" target="_blank" class="w-8 h-8 rounded-full bg-black/25 flex items-center justify-center hover:bg-kojo-green hover:text-white transition-colors text-sm"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Navigasi</h4>
+          <ul class="space-y-2 text-xs text-red-100/90">
+            <li><a href="https://kojoonigiri.biz.id/#beranda" class="hover:text-white transition-colors">Beranda</a></li>
+            <li><a href="https://kojoonigiri.biz.id/#keunggulan" class="hover:text-white transition-colors">Keunggulan Kojo</a></li>
+            <li><a href="https://kojoonigiri.biz.id/#produk" class="hover:text-white transition-colors">Varian Produk</a></li>
+            <li><a href="https://kojoonigiri.biz.id/#testimoni" class="hover:text-white transition-colors">Testimoni Pelanggan</a></li>
+            <li><a href="#/" class="hover:text-white font-bold transition-colors">Blog & Artikel</a></li>
+          </ul>
+        </div>
+
+        <!-- Hours -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Jam Operasional</h4>
+          <ul class="space-y-2 text-xs text-red-100/80">
+            <li class="flex justify-between">
+              <span>Senin - Jumat:</span> <span class="text-white font-medium">07:00 - 20:00</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Sabtu - Minggu:</span> <span class="text-white font-medium">08:00 - 18:00</span>
+            </li>
+            <li class="text-emerald-300 font-semibold pt-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-truck-fast"></i> Pengiriman Setiap Hari
+            </li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Pemesanan Langsung</h4>
+          <p class="text-xs text-red-100/80">Layanan pelanggan & respon cepat via WA:</p>
+          <a href="https://wa.me/6285165935577" target="_blank" class="inline-flex items-center gap-2 bg-kojo-green hover:bg-kojo-greenhover text-white text-xs font-bold px-4 py-3 rounded-xl transition-all shadow-md">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>0851-6593-5577</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-8 text-center text-xs text-[#37D298] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>&copy; 2026 Kojo Onigiri (Kojo Yummy Food). All rights reserved.</p>
+        <p class="text-[#37D298]">Dibuat dengan ❤️ untuk pencinta kuliner nasi praktis.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/6285165935577?text=Halo%20Kojo%20Onigiri,%20saya%20mau%20order%20langsung" target="_blank" class="bg-kojo-green hover:bg-kojo-greenhover text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-105 active:scale-95 group">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+      <span class="absolute right-16 bg-gray-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-lg">
+        Chat WA 0851-6593-5577
+      </span>
+    </a>
+  </div>
+
+  <!-- JAVASCRIPT BLOG ENGINE (OTOMATIS BACA MARKDOWN DARI GITHUB) -->
+  <script>
+    const REPO_OWNER = "kojoonigiri";
+    const REPO_NAME = "blogs";
+    const POSTS_PATH = "content/posts";
+    const app = document.getElementById("app");
+
+    // Toggle Mobile Menu
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+
+    // Parse YAML Frontmatter dari file .md Pages CMS
+    function parseFrontmatter(raw) {
+      const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
+      if (!match) return { meta: {}, body: raw };
+      const meta = {};
+      match[1].split(/\r?\n/).forEach(line => {
+        const idx = line.indexOf(":");
+        if (idx > -1) {
+          const key = line.slice(0, idx).trim();
+          let val = line.slice(idx + 1).trim().replace(/^["']|["']$/g, "");
+          meta[key] = val;
+        }
+      });
+      return { meta, body: match[2] };
+    }
+
+    // Format Tanggal Indonesia
+    function formatDateIndo(dateStr) {
+      if (!dateStr) return "";
+      const date = new Date(dateStr);
+      if (isNaN(date.getTime())) return dateStr;
+      return date.toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric" });
+    }
+
+    // Menyesuaikan path gambar dari Pages CMS (/images/blog/... -> public/images/blog/...)
+    function fixImagePath(imgPath) {
+      if (!imgPath) return "https://placehold.co/800x500/dc2626/ffffff?text=Kojo+Onigiri+Blog";
+      if (imgPath.startsWith("http")) return imgPath;
+      const clean = imgPath.replace(/^\/+/, "");
+      return `public/${clean}`;
+    }
+
+    // Ambil seluruh artikel dari GitHub API
+    async function fetchAllPosts() {
+      const res = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${POSTS_PATH}`);
+      if (!res.ok) throw new Error("Gagal mengambil daftar artikel dari GitHub.");
+      const files = await res.json();
+      const mdFiles = files.filter(f => f.name.endsWith(".md"));
+
+      const posts = await Promise.all(mdFiles.map(async file => {
+        const rawRes = await fetch(file.download_url);
+        const rawText = await rawRes.text();
+        const { meta, body } = parseFrontmatter(rawText);
+        return {
+          slug: file.name.replace(/\.md$/, ""),
+          title: meta.title || file.name.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.md$/, "").replace(/-/g, " "),
+          date: meta.date || "",
+          description: meta.description || body.replace(/[#>*_`]/g, "").slice(0, 140) + "...",
+          coverImage: fixImagePath(meta.coverImage),
+          draft: meta.draft === "true",
+          body
+        };
+      }));
+
+      return posts
+        .filter(p => !p.draft)
+        .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+    }
+
+    // Render Halaman Grid Daftar Artikel atau Halaman Detail Artikel
+    async function render() {
+      const hash = window.location.hash;
+      try {
+        const posts = await fetchAllPosts();
+
+        // TAMPILAN BACA DETAIL ARTIKEL
+        if (hash.startsWith("#/post/")) {
+          const slug = decodeURIComponent(hash.replace("#/post/", ""));
+          const post = posts.find(p => p.slug === slug);
+
+          if (!post) {
+            app.innerHTML = `
+              <div class="max-w-3xl mx-auto px-4 py-20 text-center">
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100">
+                  <i class="fa-solid fa-file-circle-question text-4xl text-kojo-red mb-4"></i>
+                  <h2 class="text-2xl font-extrabold text-gray-900 mb-2">Artikel Tidak Ditemukan</h2>
+                  <p class="text-gray-500 text-sm mb-6">Artikel yang Anda cari mungkin sudah dihapus atau belum diterbitkan.</p>
+                  <a href="#/" class="inline-flex items-center gap-2 bg-kojo-red hover:bg-kojo-redhover text-white font-bold px-6 py-3 rounded-xl text-sm transition-all">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Daftar Artikel
+                  </a>
+                </div>
+              </div>
+            `;
+            return;
+          }
+
+          document.title = `${post.title} - Blog Kojo Onigiri`;
+          app.innerHTML = `
+            <section class="py-12 lg:py-16">
+              <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <a href="#/" class="inline-flex items-center gap-2 text-sm font-bold text-kojo-red hover:text-kojo-redhover mb-6 bg-white px-4 py-2 rounded-xl shadow-sm border border-gray-100 transition-all">
+                  <i class="fa-solid fa-arrow-left"></i> Kembali ke Semua Artikel
+                </a>
+
+                <article class="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-sm border border-gray-100">
+                  <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-50 text-kojo-red text-xs font-extrabold uppercase tracking-wider mb-4">
+                    <i class="fa-regular fa-calendar"></i> ${formatDateIndo(post.date)}
+                  </div>
+
+                  <h1 class="text-2xl sm:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight mb-6">
+                    ${post.title}
+                  </h1>
+
+                  <div class="w-full aspect-[16/9] rounded-2xl overflow-hidden bg-gray-100 mb-8 shadow-inner">
+                    <img src="${post.coverImage}" alt="${post.title}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/800x450/dc2626/ffffff?text=Kojo+Onigiri';" />
+                  </div>
+
+                  <div class="prose max-w-none">
+                    ${marked.parse(post.body)}
+                  </div>
+
+                  <!-- CTA Banner di Bawah Artikel -->
+                  <div class="mt-12 pt-8 border-t border-gray-100">
+                    <div class="bg-gradient-to-r from-kojo-red via-red-600 to-amber-600 rounded-2xl p-6 sm:p-8 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-lg">
+                      <div class="text-center sm:text-left">
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider">Lapar Setelah Baca?</span>
+                        <h3 class="text-xl sm:text-2xl font-extrabold mt-2">Cobain Kojo Onigiri Sekarang!</h3>
+                        <p class="text-red-100 text-xs sm:text-sm mt-1">Praktis, mengenyangkan, 100% Halal & dibuat fresh setiap hari.</p>
+                      </div>
+                      <a href="https://wa.me/6285165935577?text=Halo%20Kojo%20Onigiri,%20saya%20habis%20baca%20artikel%20di%20blog%20dan%20mau%20pesan%20menu" target="_blank" class="bg-white text-kojo-red hover:bg-amber-50 font-extrabold px-6 py-3.5 rounded-xl text-sm transition-all whitespace-nowrap shadow-md flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg text-kojo-green"></i>
+                        <span>Pesan via WA</span>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+          `;
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          return;
+        }
+
+        // TAMPILAN HALAMAN UTAMA BLOG (GRID ARTIKEL)
+        document.title = "Blog & Artikel Kuliner - Kojo Onigiri";
+        app.innerHTML = `
+          <!-- Blog Hero Header -->
+          <section class="bg-gradient-to-b from-red-50/80 via-white to-transparent pt-12 pb-8 border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+              <span class="text-kojo-red font-extrabold text-xs uppercase tracking-widest bg-red-50 px-3.5 py-1.5 rounded-full border border-red-100">
+                Jurnal Kuliner & Gaya Hidup
+              </span>
+              <h1 class="text-3xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mt-4 mb-4">
+                Blog <span class="text-transparent bg-clip-text bg-gradient-to-r from-kojo-red via-red-600 to-amber-500">Kojo Onigiri</span>
+              </h1>
+              <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+                Temukan inspirasi kuliner, rekomendasi jajanan favorit, tips bekal praktis, dan cerita seru seputar dunia makanan.
+              </p>
+            </div>
+          </section>
+
+          <!-- Grid Daftar Artikel -->
+          <section class="py-12 lg:py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              ${posts.length === 0 ? `
+                <div class="text-center py-16 bg-white rounded-3xl border border-gray-100 shadow-sm max-w-lg mx-auto p-8">
+                  <i class="fa-regular fa-newspaper text-4xl text-gray-300 mb-3"></i>
+                  <h3 class="text-lg font-bold text-gray-900">Belum Ada Artikel</h3>
+                  <p class="text-sm text-gray-500 mt-1">Artikel baru akan segera hadir di sini.</p>
+                </div>
+              ` : `
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  ${posts.map(p => `
+                    <article onclick="location.hash='#/post/${encodeURIComponent(p.slug)}'" class="cursor-pointer bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 group">
+                      <div class="relative w-full aspect-[16/10] bg-gray-100 overflow-hidden">
+                        <img
+                          src="${p.coverImage}"
+                          alt="${p.title}"
+                          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          onerror="this.onerror=null; this.src='https://placehold.co/600x375/dc2626/ffffff?text=Kojo+Onigiri';"
+                        />
+                        <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm text-gray-800 font-bold text-[11px] px-3 py-1 rounded-full shadow-sm flex items-center gap-1.5">
+                          <i class="fa-regular fa-calendar text-kojo-red"></i> ${formatDateIndo(p.date)}
+                        </span>
+                      </div>
+
+                      <div class="p-6 flex flex-col flex-grow">
+                        <h2 class="text-lg sm:text-xl font-bold text-gray-900 mb-2.5 group-hover:text-kojo-red transition-colors line-clamp-2">
+                          ${p.title}
+                        </h2>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
+                          ${p.description}
+                        </p>
+
+                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-kojo-red">
+                          <span>Baca Selengkapnya</span>
+                          <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                      </div>
+                    </article>
+                  `).join("")}
+                </div>
+              `}
+            </div>
+          </section>
+        `;
+      } catch (err) {
+        app.innerHTML = `
+          <div class="max-w-xl mx-auto px-4 py-20 text-center">
+            <div class="bg-white p-8 rounded-3xl border border-red-100 shadow-sm">
+              <i class="fa-solid fa-triangle-exclamation text-3xl text-kojo-red mb-3"></i>
+              <h3 class="text-lg font-bold text-gray-900">Gagal Memuat Artikel</h3>
+              <p class="text-xs text-gray-500 mt-1">${err.message}</p>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    window.addEventListener("hashchange", render);
+    render();
+  </script>
+</body>
+</html>
