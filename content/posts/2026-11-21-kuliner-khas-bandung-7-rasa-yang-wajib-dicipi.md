@@ -3,7 +3,7 @@ title: "Kuliner Khas Bandung: 7 Rasa yang Wajib Dicipi"
 date: 2026-11-21
 description: "Mengenal kuliner khas Bandung: seblak, cilok, batagor, siomay, dan
   pempek. Panduan lengkap rasa yang wajib kamu coba di kota Kembang."
-coverImage: /images/blog/pexels-engkuuy-6043509.jpg
+coverImage: /images/blog/pexels-neilstha-firman-1119718312-36010457.jpg
 tags:
   - kuliner bandung
   - bandung
