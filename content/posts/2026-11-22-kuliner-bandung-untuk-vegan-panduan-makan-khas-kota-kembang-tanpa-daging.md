@@ -1,16 +1,17 @@
 ---
 title: "Kuliner Bandung untuk Vegan: Panduan Makan Khas Kota Kembang Tanpa Daging"
 date: 2026-11-22
-description: "Raih kuliner khas Bandung tanpa daging. Pahami hidangan vegan-friendly di Bandung: tahu, pecel, lontong, mi wedge, dan pilih dengan bijak."
-coverImage: "/images/blog/2026-11-22-kuliner-bandung-untuk-vegan-panduan-makan-khas-kota-kembang-tanpa-daging.jpg"
+description: "Raih kuliner khas Bandung tanpa daging. Pahami hidangan
+  vegan-friendly di Bandung: tahu, pecel, lontong, mi wedge, dan pilih dengan
+  bijak."
+coverImage: /images/blog/pexels-irhan-khoirul-2159109350-36985922.jpg
 tags:
-  - "kuliner bandung"
-  - "vegan"
-  - "bandung"
-  - "kuliner khas"
+  - kuliner bandung
+  - vegan
+  - bandung
+  - kuliner khas
 draft: false
 ---
-
 # Kuliner Bandung untuk Vegan: Panduan Makan Khas Kota Kembang Tanpa Daging
 
 Bandung selalu dianggap sebagai salah satu destinasi kuliner paling menarik di Indonesia. Di atas udara sejuk yang berpangku tangan dan pemandangan pegunungan yang indah, kota Kembang ini menyimpan kekayaan kulinernya yang sangat besar. Bagi sebagian pengunjung, kuliner adalah daya tarik utama. Namun bagi mereka yang menjalani gaya hidup vegan, memilih hidangan sering kali terasa seperti sebuah tantangan. Padahal, banyak makanan khas Bandung yang dapat dinikmati tanpa mencampurkan daging. Makanan seperti tahu, pecel, lontong, dan ragam jajanan pasar kerap tersedia dengan sedikit penyesuaian.
