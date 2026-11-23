@@ -1,15 +1,15 @@
 ---
 title: "Jajanan Bandung: Panduan Menemukan Camilan Tradisional Khas Kota Bandung"
 date: 2026-11-24
-description: "Jajanan khas Bandung seperti peteh, klepon, dan dodol. Simak panduan memilih camilan tradisional khas Kota Bandung dengan aman."
-coverImage: "/images/blog/2026-11-24-jajanan-bandung-panduan-menemukan-camilan-tradisional-khas-kota.jpg"
+description: Jajanan khas Bandung seperti peteh, klepon, dan dodol. Simak
+  panduan memilih camilan tradisional khas Kota Bandung dengan aman.
+coverImage: /images/blog/pexels-atiek-arief-2154698689-36860587.jpg
 tags:
-  - "jajanan bandung"
-  - "kuliner bandung"
-  - "bandung"
+  - jajanan bandung
+  - kuliner bandung
+  - bandung
 draft: false
 ---
-
 ## Jajanan Bandung: Panduan Menemukan Camilan Tradisional Khas Kota Bandung
 
 Jajanan Bandung bukan sekadar camilan ringan; ia adalah jejak kuliner Sunda yang hidup di berbagai sudut Kota Bandung. Diciniggahi rasa manis, gurih, pedas, dan renyah, camilan khas ini mudah ditemui di pasar tradisional, kaki lima, maupun kafe-kafe kecil. Bagi Anda yang ingin lebih mengenali jajanan Bandung, panduan ini membantu menemukan serta memilih camilan tradisional dengan benar.
