@@ -1,16 +1,17 @@
 ---
-title: "8 Ide Bisnis Kuliner yang Layak Digagas di Bandung"
+title: 8 Ide Bisnis Kuliner yang Layak Digagas di Bandung
 date: 2026-11-23
-description: "8 ide bisnis kuliner yang layak digagas di Bandung: warung rumput, es cendol, bakso, nasi goreng, dan lainnya. Tips memulai usaha kuliner dari nol."
-coverImage: "/images/blog/2026-11-23-ide-bisnis-kuliner-bandung.jpg"
+description: "8 ide bisnis kuliner yang layak digagas di Bandung: warung rumput,
+  es cendol, bakso, nasi goreng, dan lainnya. Tips memulai usaha kuliner dari
+  nol."
+coverImage: /images/blog/pexels-meggy-kadam-aryanto-3797063-12599944.jpg
 tags:
-  - "bisnis kuliner"
-  - "bandung"
-  - "ide bisnis"
-  - "kuliner bandung"
+  - bisnis kuliner
+  - bandung
+  - ide bisnis
+  - kuliner bandung
 draft: false
 ---
-
 ## Pengenalan Bisnis Kuliner di Bandung
 
 Bandung tidak sekadar kota yang sejuk, angin sepoi, dan pemandangannya yang indah. Kota ini juga menjadi salah satu titik pertemuan antara gaya hidup modern dan kearifan lokal, sehingga menciptakan peluang besar di sektor kuliner. Banyak warga dan pengusaha muda yang memilih membuka usaha kuliner karena permintaannya yang stabil, tantangan operasionalnya yang tidak terlalu kompleks, serta potensi pengembangan yang luas. Bahkan, pelaku properti yang memiliki lahan atau lahan usaha di kawasan Bandung dapat mengoptimalkannya dengan mengembangkan konsep food and beverage yang ramah pengunjung.
