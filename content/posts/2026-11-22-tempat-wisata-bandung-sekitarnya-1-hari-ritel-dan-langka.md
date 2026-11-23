@@ -1,16 +1,16 @@
 ---
 title: "Tempat Wisata Bandung & Sekitarnya: 1 Hari Riset Destinasi Terbaik"
 date: 2026-11-22
-description: "Riset tempat wisata Bandung dan sekitar dalam satu hari. Kombinasikan pegunungan, danau, pantai, dan kuliner tanpa ribet."
-coverImage: "/images/blog/2026-11-22-tempat-wisata-bandung-sekitarnya-1-hari-ritel-dan-langka.jpg"
+description: Riset tempat wisata Bandung dan sekitar dalam satu hari.
+  Kombinasikan pegunungan, danau, pantai, dan kuliner tanpa ribet.
+coverImage: /images/blog/pexels-raiza-azkaril-3921484-5849170.jpg
 tags:
-  - "wisata bandung"
-  - "bandung"
-  - "wisata"
-  - "itinerary"
+  - wisata bandung
+  - bandung
+  - wisata
+  - itinerary
 draft: false
 ---
-
 # Tempat Wisata Bandung & Sekitarnya: 1 Hari Riset Destinasi Terbaik
 
 Bandung tidak pernah kehabisan pilihan untuk wisata. Udara sejuk, pemandangan pegunungan yang luas, danau, serta pesta kulinernya yang beragam menjadikan kota ini selalu jadi andalan para pendaki, pecinta alam, maupun pencinta kuliner. Keunikan Bandung terletak pada kesederhanaan wisata bisa didapatkan tanpa jauh dari keramaian kota. Momen terakhir di suatu weekend pun cukup untuk mengisi waktu dengan screen, jalan-jalan, atau sekadar menggugah hidangan. Bagi yang ingin menjalani satu hari wisata yang produktif, kombinasi tempat wisata Bandung dan sekitarnya memberikan banyak pilihan. Dengan perencanaan yang matang, satu hari saja cukup untuk menjelajahi berbagai destinasi.
