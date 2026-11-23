@@ -1,17 +1,18 @@
 ---
-title: "Kuliner Jepang di Bandung: Panduan Pemula Mencari Makanan Jepang Autentik dan Enak"
+title: "Kuliner Jepang di Bandung: Panduan Pemula Mencari Makanan Jepang
+  Autentik dan Enak"
 date: 2026-11-23
-description: "Panduan kuliner Jepang di Bandung untuk pemula: ramen, sushi, takoyaki, serta tips memilih yang autentik, sehat, dan menyenangkan."
-coverImage: "/images/blog/2026-11-23-kuliner-jepang-bandung.jpg"
+description: "Panduan kuliner Jepang di Bandung untuk pemula: ramen, sushi,
+  takoyaki, serta tips memilih yang autentik, sehat, dan menyenangkan."
+coverImage: /images/blog/pexels-isabella-figoli-78161995-31418931.jpg
 tags:
-  - "kuliner jepang"
-  - "bandung"
-  - "ramen"
-  - "sushi"
-  - "takoyaki"
+  - kuliner jepang
+  - bandung
+  - ramen
+  - sushi
+  - takoyaki
 draft: false
 ---
-
 ## Apa Itu Kuliner Jepang di Bandung?
 
 Kuliner Jepang di Bandung telah menjadi bagian penting dari lanskap makanan kota ini. Lebih dari sekadar menu olahan, masakan Jepang hadir dengan rasa-rasa yang khas, mulai dari umami dalam ramen yang disajikan hangat, hingga kelezatan sushi yang segar dan presisi. Seiring meningkatnya minat wisata warga maupun pecinta kuliner, jumlah restoran Jepang di Kota Bandung terus bertambah, mulai dari kawasan pusat perbelanjaan hingga kafe-kafe kecil di berbagai kecamatan. Makanan ini menawarkan pengalaman berbeda dibandingkan kuliner lokal, karena penggunaan bumbu yang sederhana dan tekstur bahan yang dipertahankan pada saat memasak.
