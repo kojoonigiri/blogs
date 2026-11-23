@@ -1,15 +1,16 @@
 ---
 title: "Jajanan Khas Bandung: 8 Camilan Tradisional yang Wajib Kamu Coba"
 date: 2026-11-23
-description: "Jajanan khas Bandung: peteh krumif, kembang goyang, geplak, pisang kriuk, klepon, dan dodol. Simak daftar camilan legendaris yang wajib kamu coba."
-coverImage: "/images/blog/2026-11-23-jajanan-khas-bandung-camilan-tradisional.jpg"
+description: "Jajanan khas Bandung: peteh krumif, kembang goyang, geplak, pisang
+  kriuk, klepon, dan dodol. Simak daftar camilan legendaris yang wajib kamu
+  coba."
+coverImage: /images/blog/pexels-meggy-kadam-aryanto-3797063-13546061.jpg
 tags:
-  - "jajanan bandung"
-  - "kuliner bandung"
-  - "bandung"
+  - jajanan bandung
+  - kuliner bandung
+  - bandung
 draft: false
 ---
-
 ## Apa Itu Jajanan Bandung?
 
 Jajanan Bandung merupakan kumpulan camilan dan kue tradisional yang berkembang dari kuliner Sunda. Camilan ini biasanya dibuat dari bahan sederhana seperti beras, ketan, terigu, pisang, dan singkong. Rasa manis, gurih, pedas, dan renyah menjadi ciri khas yang membuat jajanan Bandung banyak dicari oleh wisatawan maupun penduduk setempat. Kamu dapat menemukannya di pasar tradisional, kaki lima, maupun kafe-kafe kecil di Kota Bandung.
