@@ -1,8 +1,8 @@
 ---
 title: "Tempat Wisata di Bandung dan Sekitarnya"
 date: 2026-11-25
-description: Penyajian jajanan tradisional khas 2026-11-25-tempat-wisata-bandung yang mudah ditemukan di pasar, kaki lima, maupun kafe kecil. Ciri khas jajanan ini bervariasi, mulai dari yang digoreng, dipanggang, hingga diseduh.
-coverImage: /images/blog/2026-11-25-tempat-wisata-bandung.org&utm_campaign=imageinfo&utm_content=original
+description: Tempat wisata di Bandung dan sekitarnya — rekomendasi destinasi liburan untuk dikunjungi dalam sehari, mulai dari kuliner, alam, sampai budaya.
+coverImage: /images/blog/yukizr-braga-street-1595296_1920-1.jpg
 tags:
 
   - tempat wisata bandung

@@ -38,7 +38,7 @@ BASE_URL = "https://kojoonigiri.biz.id/blogs"
 TOPICS = [
     {
         "id": "jajanan-indonesia",
-        "title": "Jajanan Indonesia",
+        "title": "Jajanan Indonesia: Kumpulan Camilan Tradisional Khas Nusantara yang Kaya Rasa, Sehat, Gurih, Cocok untuk Kamu yang Suka Culiner Menyenangkan",
         "keywords": "jajanan indonesia, kue tradisional indonesia, camilan khas indonesia",
         "tags": ["jajanan indonesia", "kuliner", "kulinari", "kue", "indonesia"],
         "body": """## Apa Itu Jajanan Indonesia?
@@ -79,7 +79,7 @@ Jajanan Indonesia adalah kenangan rasa yang sederhana namun memikat. Mulai dari 
     },
     {
         "id": "wisata-indonesia",
-        "title": "Wisata Indonesia",
+        "title": "Wisata Indonesia: Destinasi Pelancongan Melintasi Daerah dengan Keindahan Alam, Budaya, dan Nikmat yang Tak Terlupakan",
         "keywords": "wisata indonesia, destinasi wisata indonesia, liburan Indonesia",
         "tags": ["wisata indonesia", "destinasi", "liburan", "wisata", "indonesia"],
         "body": """## Apa Itu Wisata Indonesia?
@@ -116,7 +116,7 @@ Wisata Indonesia adalah subjek yang hidup, penuh keindahan alam, budaya, dan ker
     },
     {
         "id": "jajanan-lokal",
-        "title": "Jajanan Local di Berbagai Daerah Indonesia",
+        "title": "Jajanan Local di Berbagai Daerah Indonesia: Camilan Khas yang Menggambarkan Keunikan Budaya Setiap Daerah serta Cita Rasanya",
         "keywords": "jajanan lokal, kuliner daerah, jajanan khas daerah, kuliner lokal Indonesia",
         "tags": ["jajanan lokal", "kuliner daerah", "kuliner lokal", "jajanan", "indonesia"],
         "body": """## Pengertian Jajanan Lokal
@@ -163,7 +163,7 @@ Jajanan lokal adalah cerminan sejarah dan budaya masyarakat setempat. Dengan men
     },
     {
         "id": "jajanan-bandung",
-        "title": "Jajanan Khas Bandung",
+        "title": "Jajanan Khas Bandung: Kumpulan Camilan Tradisional Sunda yang Enak Dimakan, Sehat, Gurih, dan Sering Dicari Warga serta Wisatawan",
         "keywords": "jajanan bandung, jajanan khas bandung, kuliner bandung, camilan bandung",
         "tags": ["jajanan bandung", "kuliner bandung", "jajanan", "bandung"],
         "body": """## Apa Itu Jajanan Khas Bandung?
@@ -202,7 +202,7 @@ Jajanan Bandung menawarkan harum manis, kenyal, dan gurih yang sulit ditemukan d
     },
     {
         "id": "tempat-wisata-bandung",
-        "title": "Tempat Wisata di Bandung dan Sekitarnya",
+        "title": "Tempat Wisata di Bandung dan Sekitarnya: 10 Destinasi Liburan Menyenangkan dari Kepadean dengan Alam, Kuliner, Budaya",
         "keywords": "tempat wisata bandung, wisata bandung, destinasi wisata bandung, liburan bandung",
         "tags": ["tempat wisata bandung", "wisata bandung", "destinasi", "bandung"],
         "body": """## Apa Itu Tempat Wisata di Bandung?
@@ -242,7 +242,7 @@ Tempat wisata di Bandung menawarkan keindahan alam, budaya, dan kuliner sekaligu
     },
     {
         "id": "tempat-wisata-jawa-barat",
-        "title": "Tempat Wisata di Jawa Barat",
+        "title": "Tempat Wisata di Jawa Barat: 15 Destinasi Pilihan Menyenangkan dari Pantai, Pegunungan, Kuliner, Budaya, dan Liburan",
         "keywords": "tempat wisata jawa barat, wisata jawa barat, destinasi jawa barat, liburan jawa barat",
         "tags": ["wisata jawa barat", "destinasi", "jawa barat", "wisata", "liburan"],
         "body": """## Apa Itu Wisata Jawa Barat?
@@ -378,7 +378,9 @@ def write_post(topic, slug, cover, date):
         "tags:\n"
         f"{tags_md}\n"
         "draft: false\n"
-        "---"
+        "---\n"
+        "\n"
+        f"{topic['body']}"
     )
     return md
 

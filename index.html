@@ -234,6 +234,11 @@
     const POSTS_PATH = "content/posts";
     const app = document.getElementById("app");
 
+    // Pagination
+    const POSTS_PER_PAGE = 9;
+    let posts = [];
+    let currentPage = 0;
+
     // Toggle Mobile Menu
     const mobileMenuBtn = document.getElementById("mobile-menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
@@ -267,12 +272,12 @@
       return date.toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric" });
     }
 
-    // Menyesuaikan path gambar dari Pages CMS (/images/blog/... -> public/images/blog/...)
+    // Menyesuaikan path gambar dari Pages CMS (/images/blog/... -> /images/blog/...)
     function fixImagePath(imgPath) {
       if (!imgPath) return "https://placehold.co/800x500/dc2626/ffffff?text=Kojo+Onigiri+Blog";
       if (imgPath.startsWith("http")) return imgPath;
-      const clean = imgPath.replace(/^\/+/, "");
-      return `public/${clean}`;
+      const clean = imgPath.replace(/^\/+/, "").replace(/[?&].*$/, "");
+      return `/${clean}`;
     }
 
     // Ambil seluruh artikel dari GitHub API
@@ -306,7 +311,12 @@
     async function render() {
       const hash = window.location.hash;
       try {
-        const posts = await fetchAllPosts();
+        posts = await fetchAllPosts();
+
+        // Inisialisasi pagination (hanya aktif untuk halaman utama blog)
+        currentPage = parseInt(new URLSearchParams(window.location.search).get("page")) || 0;
+        const totalPages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));
+        const paginatedPosts = posts.slice(currentPage * POSTS_PER_PAGE, (currentPage + 1) * POSTS_PER_PAGE);
 
         // TAMPILAN BACA DETAIL ARTIKEL
         if (hash.startsWith("#/post/")) {
@@ -397,7 +407,7 @@
           <!-- Grid Daftar Artikel -->
           <section class="py-12 lg:py-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              ${posts.length === 0 ? `
+              ${paginatedPosts.length === 0 ? `
                 <div class="text-center py-16 bg-white rounded-3xl border border-gray-100 shadow-sm max-w-lg mx-auto p-8">
                   <i class="fa-regular fa-newspaper text-4xl text-gray-300 mb-3"></i>
                   <h3 class="text-lg font-bold text-gray-900">Belum Ada Artikel</h3>
@@ -405,7 +415,7 @@
                 </div>
               ` : `
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  ${posts.map(p => `
+                  ${paginatedPosts.map(p => `
                     <article onclick="location.hash='#/post/${encodeURIComponent(p.slug)}'" class="cursor-pointer bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 group">
                       <div class="relative w-full aspect-[16/10] bg-gray-100 overflow-hidden">
                         <img
@@ -433,9 +443,23 @@
                         </div>
                       </div>
                     </article>
-                  `).join("")}
+                  `).join("")
                 </div>
-              `}
+
+                <!-- Pagination: 9 artikel per halaman -->
+                <div class="flex justify-center items-center gap-2 mt-10">
+                  <button onclick="changePage(-1)" class="flex items-center gap-1 px-3 py-2 bg-white border border-gray-200 rounded-xl text-sm font-bold text-gray-700 hover:bg-gray-50 hover:border-kojo-red transition-all disabled:opacity-40 disabled:cursor-not-allowed" disabled>
+                    <i class="fa-solid fa-chevron-left"></i> Prev
+                  </button>
+                  ${Array.from({ length: totalPages }, (_, i) => `
+                    <button onclick="changePage(0)" class="w-9 h-9 rounded-xl text-sm font-bold transition-all ${i === currentPage ? 'bg-kojo-red text-white' : 'bg-white border border-gray-200 text-gray-700 hover:bg-gray-50'}">${i + 1}</button>
+                  `).join("")}
+                  <button onclick="changePage(1)" class="flex items-center gap-1 px-3 py-2 bg-white border border-gray-200 rounded-xl text-sm font-bold text-gray-700 hover:bg-gray-50 hover:border-kojo-red transition-all disabled:opacity-40 disabled:cursor-not-allowed" disabled>
+                    Next <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+
+              </div>
             </div>
           </section>
         `;
@@ -450,6 +474,13 @@
           </div>
         `;
       }
+    }
+
+    function changePage(dir) {
+      const totalPages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));
+      currentPage = Math.max(0, Math.min(currentPage + dir, totalPages - 1));
+      history.replaceState(null, '', '?page=' + currentPage);
+      render();
     }
 
     window.addEventListener("hashchange", render);
