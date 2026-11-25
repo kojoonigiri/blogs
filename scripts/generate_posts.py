@@ -24,9 +24,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from image_fetch import search, download  # noqa: E402
 
 REPO = os.path.dirname(os.path.abspath(__file__))
-CONTENT_DIR = os.path.join(REPO, "..", "content", "posts")
-IMAGE_DIR = os.path.join(REPO, "..", "public", "images", "blog")
-SITEMAP_SCRIPT = os.path.join(REPO, "update-sitemap.py")
+REPO_ROOT = os.path.dirname(REPO)
+CONTENT_DIR = os.path.join(REPO_ROOT, "content", "posts")
+IMAGE_DIR = os.path.join(REPO_ROOT, "public", "images", "blog")
+SITEMAP_SCRIPT = os.path.join(REPO_ROOT, "update-sitemap.py")
 USED_IMAGES_FILE = os.path.join(REPO, ".used_images.json")
 BASE_URL = "https://kojoonigiri.biz.id/blogs"
 
