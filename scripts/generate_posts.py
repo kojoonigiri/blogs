@@ -18,6 +18,7 @@ import random
 import re
 import subprocess
 import sys
+import urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from image_fetch import search, download  # noqa: E402
@@ -325,6 +326,17 @@ def mark_image_used(url):
 # ---------------------------------------------------------------------------
 # Main worker
 # ---------------------------------------------------------------------------
+def _clean_filename(path, default_ext=".jpg"):
+    """Extract a safe filename from a URL path (strip query/fragment, keep the extension)."""
+    name = os.path.basename(path)
+    if not name:
+        name = "image" + default_ext
+    name = re.sub(r"[^\w\-.]+", "_", name)
+    if not name.lower().endswith((".jpg", ".jpeg", ".png", ".webp", ".gif", ".jfif")):
+        name += default_ext
+    return name
+
+
 def fetch_image_for_topic(topic, slug):
     """Return (filename, metadata) or (None, None)."""
     candidates = topic["keywords"].split(",")
@@ -337,8 +349,8 @@ def fetch_image_for_topic(topic, slug):
         url = chosen["url"]
         if is_image_used(url):
             continue
-        ext = os.path.splitext(url)[1] or ".jpg"
-        name = f"{slug}{ext}"
+        parsed = urllib.parse.urlparse(url)
+        name = _clean_filename(parsed.path)
         dest = os.path.join(IMAGE_DIR, name)
         if download(url, dest):
             mark_image_used(url)
