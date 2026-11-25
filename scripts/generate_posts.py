@@ -394,8 +394,11 @@ def commit_and_push(msg):
 
 
 def update_sitemap():
-    subprocess.run([sys.executable, SITEMAP_SCRIPT, "--push"], cwd=REPO_ROOT,
-                   check=True, capture_output=True, text=True)
+    try:
+        subprocess.run([sys.executable, SITEMAP_SCRIPT, "--push"], cwd=REPO_ROOT,
+                       check=True, capture_output=True, text=True)
+    except subprocess.CalledProcessError as exc:
+        print(f"  [WARN] sitemap update skipped (sudah fresh): {exc.stderr.strip() or exc}")
 
 
 def run_article(topic, verbose=True):
