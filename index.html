@@ -272,12 +272,15 @@
       return date.toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric" });
     }
 
-    // Menyesuaikan path gambar dari Pages CMS (/images/blog/... -> /images/blog/...)
+    // Menyesuaikan path gambar Pages CMS ke path GitHub Pages (/blogs/public/images/blog/...)
     function fixImagePath(imgPath) {
       if (!imgPath) return "https://placehold.co/800x500/dc2626/ffffff?text=Kojo+Onigiri+Blog";
-      if (imgPath.startsWith("http")) return imgPath;
+      if (/^https?:\/\//i.test(imgPath)) return imgPath;
       const clean = imgPath.replace(/^\/+/, "").replace(/[?&].*$/, "");
-      return `/${clean}`;
+      const encoded = clean.split("/").map(encodeURIComponent).join("/");
+      // GitHub Pages project site: /blogs/ adalah root repo, file ada di public/
+      const base = window.location.pathname.replace(/\/[^/]*$/, "");
+      return `${base}/public/${encoded}`;
     }
 
     // Ambil seluruh artikel dari GitHub API
