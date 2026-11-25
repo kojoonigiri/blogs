@@ -12,7 +12,23 @@ import urllib.request
 
 COMMOM_LICENSES = {"cc0", "public domain", "cc by", "cc by-sa", "cc by 4.0", "pd", "public domain dedication"}
 
+IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".gif", ".jfif", ".svg", ".tif", ".tiff"}
+
 USER_AGENT = "Mozilla/5.0 (compatible; blog-auto/1.0)"
+
+
+def _is_image_url(url):
+    """True if the URL points to an image file."""
+    if not url:
+        return False
+    parsed = urllib.parse.urlparse(url)
+    path = parsed.path
+    ext = os.path.splitext(path)[1].lower()
+    # ignore query/fragment noise
+    if ext in IMAGE_EXTENSIONS:
+        return True
+    # some generators put the extension in the query; fall back to filename hints
+    return False
 
 
 def _search_wikimedia(query, limit=10):
@@ -31,7 +47,7 @@ def _search_wikimedia(query, limit=10):
 
 
 def search(query):
-    """Return list of dicts {"title","url","license","width","height"} filtered to free licenses."""
+    """Return list of dicts {"title","url","license","width","height"} filtered to free-licensed images."""
     raw = _search_wikimedia(query)
     out = []
     for page in raw.get("query", {}).get("pages", {}).values():
@@ -44,6 +60,8 @@ def search(query):
         if lic not in COMMOM_LICENSES:
             continue
         url = info.get("thumburl") or info.get("url")
+        if not _is_image_url(url):
+            continue
         out.append({
             "title": page.get("title", ""),
             "url": url,

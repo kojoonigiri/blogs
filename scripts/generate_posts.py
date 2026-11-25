@@ -394,7 +394,7 @@ def commit_and_push(msg):
 
 
 def update_sitemap():
-    subprocess.run([sys.executable, SITEMAP_SCRIPT, "--push"], cwd=REPO,
+    subprocess.run([sys.executable, SITEMAP_SCRIPT, "--push"], cwd=REPO_ROOT,
                    check=True, capture_output=True, text=True)
 
 
