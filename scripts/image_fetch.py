@@ -7,6 +7,7 @@ import json
 import os
 import re
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -31,6 +32,21 @@ def _is_image_url(url):
     return False
 
 
+def _open_with_retry(req, timeout):
+    """Buka URL dengan backoff untuk 429/5xx sementara dari Wikimedia."""
+    delay = 5
+    for attempt in range(4):
+        try:
+            return urllib.request.urlopen(req, timeout=timeout)
+        except urllib.error.HTTPError as exc:
+            if exc.code in (429, 500, 502, 503, 504) and attempt < 3:
+                time.sleep(delay)
+                delay *= 2
+                continue
+            raise
+    raise RuntimeError("retry exhausted")
+
+
 def _search_wikimedia(query, limit=10):
     params = {
         "action": "query", "format": "json",
@@ -42,7 +58,7 @@ def _search_wikimedia(query, limit=10):
         "https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode(params),
         headers={"User-Agent": USER_AGENT},
     )
-    with urllib.request.urlopen(req, timeout=25) as r:
+    with _open_with_retry(req, 25) as r:
         return json.load(r)
 
 
@@ -75,6 +91,6 @@ def search(query):
 def download(url, dest):
     """Download image (with http/https redirect) to dest. Returns True on success."""
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(req, timeout=40) as r, open(dest, "wb") as f:
+    with _open_with_retry(req, 40) as r, open(dest, "wb") as f:
         f.write(r.read())
     return os.path.exists(dest)
