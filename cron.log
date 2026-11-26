@@ -2,3 +2,123 @@
     "title": "Jajanan Indonesia: Kumpulan Camilan Tradisional Khas Nusantara yang Kaya Rasa, Sehat, Gurih, Cocok untuk Kamu yang Suka Culiner Menyenangkan"Jajanan Indonesia: Kumpulan Camilan Tradisional Khas Nusantara yang Kaya Rasa, Sehat, Gurih, Cocok untuk Kamu yang Suka Culiner Menyenangkankeywords": "jajanan indonesia, kue tradisional indonesia, camilan khas indonesia",
                                                                                                                                                                                                                                                                                                                                                                                        ^
 SyntaxError: unterminated string literal (detected at line 41)
+[INFO] ditemukan 14 gambar yang sudah dipakai. Jalankan --force untuk menambahkan lebih banyak.
+[INFO] memilih 4 topik secara acak dari 6 kategori
+  [GAGAL] tidak dapat gambar unik untuk: Tempat Wisata di Jawa Barat: 15 Destinasi Pilihan Menyenangkan dari Pantai, Pegunungan, Kuliner, Budaya, dan Liburan
+  [GAGAL] tidak dapat gambar unik untuk: Jajanan Khas Bandung: Kumpulan Camilan Tradisional Sunda yang Enak Dimakan, Sehat, Gurih, dan Sering Dicari Warga serta Wisatawan
+  [OK] post: 2026-11-25-wisata-indonesia.md | gambar: Stamp_of_Indonesia_-_2008_-_Colnect_248199_-_Wisata_Bahari.jpeg (public domain)
+Traceback (most recent call last):
+  File "/home/ubuntu/blogs/scripts/generate_posts.py", line 460, in <module>
+    main()
+    ~~~~^^
+  File "/home/ubuntu/blogs/scripts/generate_posts.py", line 448, in main
+    if run_article(t):
+       ~~~~~~~~~~~^^^
+  File "/home/ubuntu/blogs/scripts/generate_posts.py", line 408, in run_article
+    cover, meta = fetch_image_for_topic(topic, slug)
+                  ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/blogs/scripts/generate_posts.py", line 346, in fetch_image_for_topic
+    results = search(kw)
+  File "/home/ubuntu/blogs/scripts/image_fetch.py", line 51, in search
+    raw = _search_wikimedia(query)
+  File "/home/ubuntu/blogs/scripts/image_fetch.py", line 45, in _search_wikimedia
+    with urllib.request.urlopen(req, timeout=25) as r:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 493, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.14/urllib/request.py", line 602, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.14/urllib/request.py", line 531, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 464, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.14/urllib/request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests
+[INFO] ditemukan 15 gambar yang sudah dipakai. Jalankan --force untuk menambahkan lebih banyak.
+[INFO] memilih 4 topik secara acak dari 6 kategori
+  [GAGAL] tidak dapat gambar unik untuk: Tempat Wisata di Bandung dan Sekitarnya: 10 Destinasi Liburan Menyenangkan dari Kepadean dengan Alam, Kuliner, Budaya
+  [OK] post: 2026-11-25-jajanan-indonesia.md | gambar: Tumpeng_Jajanan_Pasar.jpg (cc0)
+  [GAGAL] tidak dapat gambar unik untuk: Tempat Wisata di Jawa Barat: 15 Destinasi Pilihan Menyenangkan dari Pantai, Pegunungan, Kuliner, Budaya, dan Liburan
+Traceback (most recent call last):
+  File "/home/ubuntu/blogs/scripts/generate_posts.py", line 460, in <module>
+    main()
+    ~~~~^^
+  File "/home/ubuntu/blogs/scripts/generate_posts.py", line 448, in main
+    if run_article(t):
+       ~~~~~~~~~~~^^^
+  File "/home/ubuntu/blogs/scripts/generate_posts.py", line 408, in run_article
+    cover, meta = fetch_image_for_topic(topic, slug)
+                  ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/blogs/scripts/generate_posts.py", line 346, in fetch_image_for_topic
+    results = search(kw)
+  File "/home/ubuntu/blogs/scripts/image_fetch.py", line 67, in search
+    raw = _search_wikimedia(query)
+  File "/home/ubuntu/blogs/scripts/image_fetch.py", line 61, in _search_wikimedia
+    with _open_with_retry(req, 25) as r:
+         ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ubuntu/blogs/scripts/image_fetch.py", line 40, in _open_with_retry
+    return urllib.request.urlopen(req, timeout=timeout)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 493, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.14/urllib/request.py", line 602, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.14/urllib/request.py", line 531, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 464, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.14/urllib/request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests
+[INFO] ditemukan 16 gambar yang sudah dipakai. Jalankan --force untuk menambahkan lebih banyak.
+[INFO] memilih 5 topik secara acak dari 6 kategori
+  [GAGAL] tidak dapat gambar unik untuk: Tempat Wisata di Bandung dan Sekitarnya: 10 Destinasi Liburan Menyenangkan dari Kepadean dengan Alam, Kuliner, Budaya
+  [GAGAL] tidak dapat gambar unik untuk: Jajanan Local di Berbagai Daerah Indonesia: Camilan Khas yang Menggambarkan Keunikan Budaya Setiap Daerah serta Cita Rasanya
+  [OK] post: 2026-11-25-jajanan-indonesia.md | gambar: Jajanan_Pasar_Cantik_Manis.jpg (cc by 4.0)
+Traceback (most recent call last):
+  File "/home/ubuntu/blogs/scripts/generate_posts.py", line 460, in <module>
+    main()
+    ~~~~^^
+  File "/home/ubuntu/blogs/scripts/generate_posts.py", line 448, in main
+    if run_article(t):
+       ~~~~~~~~~~~^^^
+  File "/home/ubuntu/blogs/scripts/generate_posts.py", line 408, in run_article
+    cover, meta = fetch_image_for_topic(topic, slug)
+                  ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/blogs/scripts/generate_posts.py", line 346, in fetch_image_for_topic
+    results = search(kw)
+  File "/home/ubuntu/blogs/scripts/image_fetch.py", line 67, in search
+    raw = _search_wikimedia(query)
+  File "/home/ubuntu/blogs/scripts/image_fetch.py", line 61, in _search_wikimedia
+    with _open_with_retry(req, 25) as r:
+         ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/ubuntu/blogs/scripts/image_fetch.py", line 40, in _open_with_retry
+    return urllib.request.urlopen(req, timeout=timeout)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 493, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.14/urllib/request.py", line 602, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.14/urllib/request.py", line 531, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 464, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.14/urllib/request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests

@@ -2,7 +2,7 @@
 title: "Wisata Indonesia: Destinasi Pelancongan Melintasi Daerah dengan Keindahan Alam, Budaya, dan Nikmat yang Tak Terlupakan"
 date: 2026-11-25
 description: Penyajian jajanan tradisional khas 2026-11-25-wisata-indonesia yang mudah ditemukan di pasar, kaki lima, maupun kafe kecil. Ciri khas jajanan ini bervariasi, mulai dari yang digoreng, dipanggang, hingga diseduh.
-coverImage: /images/blog/Pintu_Masuk_Destinasi_Wisata_Gua_Gumantung.jpg
+coverImage: /images/blog/Stamp_of_Indonesia_-_2008_-_Colnect_248199_-_Wisata_Bahari.jpeg
 tags:
 
   - wisata indonesia

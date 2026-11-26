@@ -2,7 +2,7 @@
 title: "Jajanan Indonesia: Kumpulan Camilan Tradisional Khas Nusantara yang Kaya Rasa, Sehat, Gurih, Cocok untuk Kamu yang Suka Culiner Menyenangkan"
 date: 2026-11-25
 description: Penyajian jajanan tradisional khas 2026-11-25-jajanan-indonesia yang mudah ditemukan di pasar, kaki lima, maupun kafe kecil. Ciri khas jajanan ini bervariasi, mulai dari yang digoreng, dipanggang, hingga diseduh.
-coverImage: /images/blog/Lomba_Kreasi_Jajanan_Polo_Pendem_2025_Jombang_091907.jpg
+coverImage: /images/blog/Jajanan_Pasar_Cantik_Manis.jpg
 tags:
 
   - jajanan indonesia
